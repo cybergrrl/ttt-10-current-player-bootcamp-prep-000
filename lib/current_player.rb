@@ -1,16 +1,7 @@
 def turn_count(array)
-  counter = 0
-  array.each do |position|
-    if position == "X" || position == "O"
-      counter += 1
-    end
-  end
-  return counter
+    counter = (position == "X" || position == "O") ? counter += 1 : break
 end
 
 def current_player(array)
-  if turn_count(array) % 2 == 0
-    return "X"
-  else return "O"
-  end
+  player = turn_count(array) % 2 == 0 ? "X" : "O"
 end
